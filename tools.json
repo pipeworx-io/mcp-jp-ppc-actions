@@ -1,0 +1,38 @@
+[
+  {
+    "name": "jp_ppc_actions_search",
+    "description": "Search the Japan Personal Information Protection Commission's announced administrative responses against businesses under the Act on the Protection of Personal Information (行政上の対応: guidance, recommendations, orders), for example after a data breach or an improper handling of customer data. By company name in Japanese or English; match is exact or partial after Unicode folding, corporate-form words dropped. Each hit gives the announcement date, the businesses named, the announcement's title and a link to the commission's announcement. Whether a response was guidance, a recommendation or an order is stated only in the attached document and is not read; `response_kind` says so. Coverage starts April 2021 (fiscal 2021); announcements that name no business in the title, public bodies and individuals are not searchable and are counted. No hit means no announcement naming that company in the period covered, as read now; it does not clear the company. Example: name=\"株式会社イセトー\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name in Japanese or English. At least 2 characters."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum matches returned (1-50, default 10); `total_matches` always gives the full count."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "jp_ppc_actions_read",
+    "description": "Read one Personal Information Protection Commission announcement of an administrative response, by the `link` a search hit returned (only the commission's own press announcement pages are accepted). Returns the announcement date as the commission prints it, its heading and the link, format and size of the attached document that states what the commission did (guidance, recommendation or order) and why; that document is not read here. Example: link=\"https://www.ppc.go.jp/news/press/2025/250910\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "description": "Announcement link from jp_ppc_actions_search, https://www.ppc.go.jp/news/press/<fiscal-year>/<id>."
+        }
+      },
+      "required": [
+        "link"
+      ]
+    }
+  }
+]

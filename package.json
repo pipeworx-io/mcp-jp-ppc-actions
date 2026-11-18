@@ -1,0 +1,33 @@
+{
+  "name": "@pipeworx/mcp-jp-ppc-actions",
+  "version": "0.1.0",
+  "description": "jp-ppc-actions -- the Personal Information Protection Commission (個人情報保護委員会) press announcements of administrative responses (行政上の対応: guidance 指導, recommendations 勧告, orders 命令) against businesses under the Act on the Protection of Personal Information.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "mcp-jp-ppc-actions": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "jp-ppc-actions"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-jp-ppc-actions.git"
+  },
+  "mcpName": "io.github.pipeworx-io/jp-ppc-actions",
+  "pipeworx": {
+    "mode": "gateway",
+    "slug": "jp-ppc-actions",
+    "gatewaySlug": "jp-ppc-actions",
+    "sourceHash": "v1-b1c9495b471b26e8e9d43d0e2de0c07c9196281a67814b297a5b420a5b305ffa",
+    "sourceCommit": "63eb9b1fe9f3b095b65c4d9ab981248c93e13326"
+  }
+}

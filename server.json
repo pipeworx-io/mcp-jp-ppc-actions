@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/jp-ppc-actions",
+  "title": "Jp Ppc Actions",
+  "description": "jp-ppc-actions -- the Personal Information Protection Commission (個人情報保護委員会) press announcements…",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/jp-ppc-actions",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-jp-ppc-actions",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/jp-ppc-actions/mcp"
+    }
+  ]
+}
